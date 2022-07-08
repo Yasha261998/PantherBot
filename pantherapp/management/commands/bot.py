@@ -85,7 +85,7 @@ async def _get_password(message: types.Message, state: FSMContext):
             if created or obj:
                 #############################
                 await bot.send_message(chat_id, f'Спасибо за регистрацию, {username}.\n'
-                                                f'Ссылка для авторизации: ')
+                                                f'Ссылка для авторизации: http://yasha261998.pythonanywhere.com/login/')
                 await state.finish()
             else:
                 await bot.send_message(chat_id, error_db)
