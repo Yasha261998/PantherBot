@@ -4,3 +4,4 @@ panther.db
 ../.idea
 Pipfile
 Pipfile.lock
+*/pantherenv/
