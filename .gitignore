@@ -1,0 +1,6 @@
+**/__pycache__/
+*.pyc
+panther.db
+../.idea
+Pipfile
+Pipfile.lock

@@ -1,0 +1,8 @@
+h1{
+    text-align: center;
+}
+.auth-block{
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}

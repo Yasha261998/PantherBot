@@ -1,0 +1,36 @@
+{% extends "pantherapp/base.html" %}
+{% block title %}Вход{% endblock %}
+{% block styles %}
+    {% load static %}
+    <link type="text/css" href="{% static 'pantherapp/css/auth.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="container d-flex justify-content-center">
+        <div class="mt-5 p-4 auth-block">
+            <div><h1 class="display-5 fw-bold mb-5">Вход</h1></div>
+            <div class="form-block">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% for f_field in form %}
+                        <div class="form-group mb-3">
+                            {% if f_field.field.widget.input_type == 'checkbox' %}
+                                {{ f_field }}<label for="remember">Запомнить</label>
+                            {% else %}
+                                {{ f_field.label_tag }}
+                                {{ f_field }}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <input type="submit" class="btn btn-primary form-control" value="Войти" />
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

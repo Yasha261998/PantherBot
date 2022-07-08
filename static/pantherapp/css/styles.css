@@ -1,0 +1,42 @@
+body{
+    background-color: #f8f9fa;
+}
+.navbar{
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+}
+.messages {
+    margin:10px 100px;
+    padding:0;
+    list-style-type:
+    none;
+}
+.messages .success,
+.messages .warning,
+.messages .error,
+.messages .info {
+    margin:0;
+    padding:14px 20px;
+    list-style:none;
+    color:#fff;
+}
+
+.messages .success { background:#81ce81; }
+.messages .success a { color:#0ac33e; }
+
+.messages .error { background:#a30029; color:#e9828e; }
+.messages .error a { color:#e9828e; }
+
+.messages info { background:#faffae; color:#696b4e; }
+.messages info a { color:#1586de; }
+
+.messages warning { background:#de9404; }
+.messages warning a { color:#f49000; }
+
+.messages  a.close {
+    margin:0;
+    float:right;
+    opacity:1;
+    border:0;
+    box-shadow:none;
+    text-shadow:none;
+}

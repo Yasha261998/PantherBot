@@ -1,0 +1,25 @@
+{% extends "pantherapp/base.html" %}
+{% block title %}Данные{% endblock %}
+{% block styles %}
+    {% load static %}
+    <link type="text/css" href="{% static 'pantherapp/css/index.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="p-5 mb-4">
+        <p>ID Telegram</p>
+        <p class="fs-4">{{ item.id_telegram }}</p>
+        <p>Username</p>
+        <p class="fs-4">{{ item.username }}</p>
+        <p>Имя</p>
+        <p class="fs-4">{{ item.first_name }}</p>
+        <hr class="my-4">
+        <a class="btn btn-primary" href="https://t.me/{{ item.username }}">@Yasha261998</a>
+    </div>
+{% endblock %}
