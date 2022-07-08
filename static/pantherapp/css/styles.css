@@ -23,8 +23,8 @@ body{
 .messages .success { background:#81ce81; }
 .messages .success a { color:#0ac33e; }
 
-.messages .error { background:#a30029; color:#e9828e; }
-.messages .error a { color:#e9828e; }
+.messages .error { background:#eb3c36; color:#ffffff; }
+.messages .error a { color:#ffffff; }
 
 .messages info { background:#faffae; color:#696b4e; }
 .messages info a { color:#1586de; }
